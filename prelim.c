@@ -2,8 +2,8 @@
 #include <stdio.h>
 int main () {
 	
-  char hostname[HOST_NAME_MAX + 1];
-  gethostname(hostname, HOST_NAME_MAX + 1);
+  char hostname[1024]];
+  gethostname(hostname, 1024);
   
   printf("Hostname: %s\n", hostname);
   return 0;
