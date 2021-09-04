@@ -44,7 +44,7 @@ double calc_numerical_integration(int functionid, int a, int b, int n, int inten
 
         double integral = outside * summation;
 
-        integral = 5.0;
+        //integral = 5.0;
 
         return integral;
 
@@ -63,6 +63,7 @@ int main (int argc, char* argv[]) {
     int b = atoi(argv[3]);
     int n = atoi(argv[4]);
     int intensity = atoi(argv[5]);
+    //
     
     clock_t t; // t represents clock ticks which is of type 'clock_t'
     t = clock(); // start clock
@@ -72,6 +73,7 @@ int main (int argc, char* argv[]) {
     printf("%lf\n", r);
     fprintf(stderr, "%f\n", time_taken);
     
-    return 0;
+    // 0
+    return r;
 }
 
