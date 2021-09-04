@@ -20,6 +20,7 @@ extern "C" {
 double calc_numerical_integration(int functionid, int a, int b, int n, int intensity){
     float outside = (b - a)/n;
     float summation = 0;
+    /*
     switch (functionid) {
         case 1:
             for (int i = 0; i < n-1; i++) {
@@ -41,6 +42,28 @@ double calc_numerical_integration(int functionid, int a, int b, int n, int inten
                 summation += f4(a + (i+.5)*outside, intensity);
             }
             break;
+    }
+    */
+
+    if (functionid == 1) {
+        for (int i = 0; i < n-1; i++) {
+                summation += f1(a + (i+.5)*outside, intensity);
+        }
+    }
+    if (functionid == 2) {
+        for (int i = 0; i < n-1; i++) {
+                summation += f2(a + (i+.5)*outside, intensity);
+        }
+    }
+    if (functionid == 3) {
+        for (int i = 0; i < n-1; i++) {
+                summation += f3(a + (i+.5)*outside, intensity);
+        }
+    }
+    if (functionid == 4) {
+        for (int i = 0; i < n-1; i++) {
+                summation += f4(a + (i+.5)*outside, intensity);
+        }
     }
 
         double integral = outside * summation;
