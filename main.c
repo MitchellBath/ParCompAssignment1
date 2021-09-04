@@ -47,22 +47,22 @@ double calc_numerical_integration(int functionid, int a, int b, int n, int inten
 
     if (functionid == 1) {
         for (int i = 0; i < n; i++) {
-                summation += f1(a + (i+.5)*((b-a)/n)), intensity);
+                summation += f1(a + (i+.5)*((b-a)/n), intensity);
         }
     }
     if (functionid == 2) {
         for (int i = 0; i < n; i++) {
-                summation += f2(a + (i+.5)*((b-a)/n)), intensity);
+                summation += f2(a + (i+.5)*((b-a)/n), intensity);
         }
     }
     if (functionid == 3) {
         for (int i = 0; i < n; i++) {
-                summation += f3(a + (i+.5)*((b-a)/n)), intensity);
+                summation += f3(a + (i+.5)*((b-a)/n), intensity);
         }
     }
     if (functionid == 4) {
         for (int i = 0; i < n; i++) {
-                summation += f4(a + (i+.5)*((b-a)/n)), intensity);
+                summation += f4(a + (i+.5)*((b-a)/n), intensity);
         }
     }
         double integral;
