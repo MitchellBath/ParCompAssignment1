@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include <limits.h>
 int main(void) {
-  
-  print(popen("hostname -a"));
+  char *command = "hostname -a";
+  print(system(command));
 
 }
