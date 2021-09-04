@@ -18,27 +18,29 @@ extern "C" {
 #endif
 
 double calc_numerical_integration(int functionid, int a, int b, int n, int intensity){
-    double outside = (b - a)/n;
-    double summation = 0;
+    double outside;
+    double summation;
+    outside = (b - a)/n;
+    summation = 0;
     /*
     switch (functionid) {
         case 1:
-            for (int i = 0; i < n-1; i++) {
+            for (int i = 0; i < n; i++) {
                 summation += f1(a + (i+.5)*outside, intensity);
             }
             break;
         case 2:
-            for (int i = 0; i < n-1; i++) {
+            for (int i = 0; i < n; i++) {
                 summation += f2(a + (i+.5)*outside, intensity);
             }
             break;
         case 3:
-            for (int i = 0; i < n-1; i++) {
+            for (int i = 0; i < n; i++) {
                 summation += f3(a + (i+.5)*outside, intensity);
             }
             break;
         case 4:
-            for (int i = 0; i < n-1; i++) {
+            for (int i = 0; i < n; i++) {
                 summation += f4(a + (i+.5)*outside, intensity);
             }
             break;
