@@ -67,6 +67,7 @@ double calc_numerical_integration(int functionid, int a, int b, int n, int inten
     }
         double integral;
         summation += 1;
+        outside += 1;
         integral = outside * summation;
         //printf("calc: %lf\n", integral); prints 0.0
         return integral;
