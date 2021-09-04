@@ -17,7 +17,7 @@ extern "C" {
 }
 #endif
 
-double calc_numerical_integration(int functionid, int a, int b, int n, int intensity){
+static double calc_numerical_integration(int functionid, int a, int b, int n, int intensity){
     float outside = (b - a)/n;
     float summation = 0;
     switch (functionid) {
@@ -70,8 +70,7 @@ int main (int argc, char* argv[]) {
     double r = calc_numerical_integration(function_id, a, b, n, intensity);
     t = clock()-t; // end clock=
     float time_taken = ((double)t)/CLOCKS_PER_SEC; // in seconds; CLOCKS_PER_SEC is the number of clock ticks per second
-    //printf("%lf\n", r);
-    printf("%lf\n", 50.0);
+    printf("%lf\n", r);
     fprintf(stderr, "%f\n", time_taken);
     
     return 0;
