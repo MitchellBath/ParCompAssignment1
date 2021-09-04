@@ -21,6 +21,7 @@ double calc_numerical_integration(int functionid, int a, int b, int n, int inten
     double outside;
     double summation;
     outside = (b - a)/n;
+    printf("outside: %lf\n", outside); prints 0.0
     summation = 0;
     /*
     switch (functionid) {
