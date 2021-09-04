@@ -18,33 +18,25 @@ extern "C" {
 #endif
 
 double calc_numerical_integration(int functionid, int a, int b, int n, int intensity){
-    float outside;
-    float summation;
+    float outside = (b - a)/n;
+    float summation = 0;
     switch (functionid) {
         case 1:
-            outside = (b - a)/n;
-            summation = 0;
         for (int i = 0; i < n-1; i++) {
             summation += f1(a + (i+.5)*outside, intensity);
         }
         break;
         case 2:
-            outside = (b - a)/n;
-            summation = 0;
         for (int i = 0; i < n-1; i++) {
             summation += f2(a + (i+.5)*outside, intensity);
         }
         break;
         case 3:
-            outside = (b - a)/n;
-            summation = 0;
         for (int i = 0; i < n-1; i++) {
             summation += f3(a + (i+.5)*outside, intensity);
         }
         break;
         case 4:
-            outside = (b - a)/n;
-            summation = 0;
         for (int i = 0; i < n-1; i++) {
             summation += f4(a + (i+.5)*outside, intensity);
         }
@@ -63,6 +55,7 @@ int main (int argc, char* argv[]) {
         return -1;
     }
     
+    // commandline arguments
     int function_id = atoi(argv[1]);
     int a = atoi(argv[2]);
     int b = atoi(argv[3]);
