@@ -44,7 +44,7 @@ double calc_numerical_integration(int functionid, int a, int b, int n, int inten
 
         double integral = outside * summation;
 
-        integral = 50;
+        //integral = 50;
 
         return integral;
 
@@ -68,6 +68,9 @@ int main (int argc, char* argv[]) {
     clock_t t; // t represents clock ticks which is of type 'clock_t'
     t = clock(); // start clock
     double r = calc_numerical_integration(function_id, a, b, n, intensity);
+
+    r = calc_numerical_integration(function_id, a, b, n, intensity);
+
     t = clock()-t; // end clock=
     float time_taken = ((double)t)/CLOCKS_PER_SEC; // in seconds; CLOCKS_PER_SEC is the number of clock ticks per second
     printf("%lf\n", r);
