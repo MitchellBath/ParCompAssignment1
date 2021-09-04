@@ -92,7 +92,7 @@ int main (int argc, char* argv[]) {
     int b = atoi(argv[3]);
     int n = atoi(argv[4]);
     int intensity = atoi(argv[5]);
-    printf("funcid:%i, a:%i, b:%i, n:%i, int:%i", function_id, a, b, n, intensity);
+    //printf("funcid:%i, a:%i, b:%i, n:%i, int:%i", function_id, a, b, n, intensity); 10 intensity?
     //
     
     clock_t t; // t represents clock ticks which is of type 'clock_t'
