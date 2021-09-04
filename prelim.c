@@ -4,6 +4,6 @@
 #include <limits.h>
 int main(void) {
   char *command = "hostname -a";
-  printf(system(command));
+  system(command);
 
 }
