@@ -69,7 +69,7 @@ int main (int argc, char* argv[]) {
     t = clock(); // start clock
     double r = calc_numerical_integration(function_id, a, b, n, intensity);
 
-    r = calc_numerical_integration(function_id, a, b, n, intensity);
+    r = 50;
 
     t = clock()-t; // end clock=
     float time_taken = ((double)t)/CLOCKS_PER_SEC; // in seconds; CLOCKS_PER_SEC is the number of clock ticks per second
