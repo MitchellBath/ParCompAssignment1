@@ -63,10 +63,10 @@ int main (int argc, char* argv[]) {
         return -1;
     }
     
-    int function_id = argv[1];
-    int a = argv[2];
-    int b = argv[3];
-    int intensity = argv[4];
+    int function_id = atoi(argv[1]);
+    int a = atoi(argv[2]);
+    int b = atoi(argv[3]);
+    int intensity = atoi(argv[4]);
     
     clock_t t; // t represents clock ticks which is of type 'clock_t'
     t = clock(); // start clock
