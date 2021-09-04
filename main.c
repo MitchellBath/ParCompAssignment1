@@ -17,7 +17,7 @@ extern "C" {
 }
 #endif
 
-static double calc_numerical_integration(int functionid, int a, int b, int n, int intensity){
+double calc_numerical_integration(int functionid, int a, int b, int n, int intensity){
     float outside = (b - a)/n;
     float summation = 0;
     switch (functionid) {
@@ -44,7 +44,7 @@ static double calc_numerical_integration(int functionid, int a, int b, int n, in
 
         double integral = outside * summation;
 
-        //integral = 5.0;
+        integral = 50;
 
         return integral;
 
