@@ -51,17 +51,17 @@ double calc_numerical_integration(int functionid, int a, int b, int n, int inten
         }
     }
     if (functionid == 2) {
-        for (int i = 0; i < n-1; i++) {
+        for (int i = 0; i < n; i++) {
                 summation += f2(a + (i+.5)*outside, intensity);
         }
     }
     if (functionid == 3) {
-        for (int i = 0; i < n-1; i++) {
+        for (int i = 0; i < n; i++) {
                 summation += f3(a + (i+.5)*outside, intensity);
         }
     }
     if (functionid == 4) {
-        for (int i = 0; i < n-1; i++) {
+        for (int i = 0; i < n; i++) {
                 summation += f4(a + (i+.5)*outside, intensity);
         }
     }
