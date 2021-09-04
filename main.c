@@ -22,33 +22,30 @@ double calc_numerical_integration(int functionid, int a, int b, int n, int inten
     float summation = 0;
     switch (functionid) {
         case 1:
-        for (int i = 0; i < n-1; i++) {
-            summation += f1(a + (i+.5)*outside, intensity);
-        }
-        break;
+            for (int i = 0; i < n-1; i++) {
+                summation += f1(a + (i+.5)*outside, intensity);
+            }
+            break;
         case 2:
-        for (int i = 0; i < n-1; i++) {
-            summation += f2(a + (i+.5)*outside, intensity);
-        }
-        break;
+            for (int i = 0; i < n-1; i++) {
+                summation += f2(a + (i+.5)*outside, intensity);
+            }
+            break;
         case 3:
-        for (int i = 0; i < n-1; i++) {
-            summation += f3(a + (i+.5)*outside, intensity);
-        }
-        break;
+            for (int i = 0; i < n-1; i++) {
+                summation += f3(a + (i+.5)*outside, intensity);
+            }
+            break;
         case 4:
-        for (int i = 0; i < n-1; i++) {
-            summation += f4(a + (i+.5)*outside, intensity);
-        }
-        break;
+            for (int i = 0; i < n-1; i++) {
+                summation += f4(a + (i+.5)*outside, intensity);
+            }
+            break;
+    }
 
         double integral = outside * summation;
-
-        //integral = 50;
-
         return integral;
 
-    }
 }
 int main (int argc, char* argv[]) {
     
@@ -68,9 +65,6 @@ int main (int argc, char* argv[]) {
     clock_t t; // t represents clock ticks which is of type 'clock_t'
     t = clock(); // start clock
     double r = calc_numerical_integration(function_id, a, b, n, intensity);
-
-    r = 50;
-
     t = clock()-t; // end clock=
     float time_taken = ((double)t)/CLOCKS_PER_SEC; // in seconds; CLOCKS_PER_SEC is the number of clock ticks per second
     printf("%lf\n", r);
