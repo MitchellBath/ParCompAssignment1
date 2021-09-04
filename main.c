@@ -18,65 +18,31 @@ extern "C" {
 #endif
 
 double calc_numerical_integration(int functionid, int a, int b, int n, int intensity){
-    double outside;
-    double summation;
-    outside = (b - a)/n;
-    //printf("outside: %lf\n", outside);// prints 0.0
+    double outside, summation;
+    outside = ((float)b - (float)a)/(float)n;
     summation = 0;
-    /*
-    switch (functionid) {
-        case 1:
-            for (int i = 0; i < n; i++) {
-                summation += f1(a + (i+.5)*outside, intensity);
-            }
-            break;
-        case 2:
-            for (int i = 0; i < n; i++) {
-                summation += f2(a + (i+.5)*outside, intensity);
-            }
-            break;
-        case 3:
-            for (int i = 0; i < n; i++) {
-                summation += f3(a + (i+.5)*outside, intensity);
-            }
-            break;
-        case 4:
-            for (int i = 0; i < n; i++) {
-                summation += f4(a + (i+.5)*outside, intensity);
-            }
-            break;
-    }
-    */
+    float (*f)(float, int);
 
     if (functionid == 1) {
-        for (int i = 0; i < n; i++) {
-                float x = a + (i+.5)*((b-a)/n);
-                summation += f1(x, intensity);
-        }
+        f = f1;
     }
-    if (functionid == 2) {
-        for (int i = 0; i < n; i++) {
-                float x = a + (i+.5)*((b-a)/n);
-                summation += f2(x, intensity);
-        }
+    else if (functionid == 2) {
+        f = f2;
     }
-    if (functionid == 3) {
-        for (int i = 0; i < n; i++) {
-                float x = a + (i+.5)*((b-a)/n);
-                summation += f3(x, intensity);
-        }
+    else if (functionid == 3) {
+        f = f3;
     }
-    if (functionid == 4) {
-        for (int i = 0; i < n; i++) {
-                float x = a + (i+.5)*((b-a)/n);
-                summation += f4(x, intensity);
-        }
+    else if (functionid == 4) {
+        f = f4;
+    } else {
+        return 0;
     }
-        double integral;
-        //printf("outside: %lf\n", outside); prints 0.0
-        integral = outside * summation;
-        //printf("calc: %lf\n", integral); prints 0.0
-        return integral;
+
+    for (int i = 0; i < n; i++) {
+        summation += f(a + (i+.5)*(((float)b-(float)a)/(float)n), intensity);
+    }
+
+    return outside * summation;
 
 }
 int main (int argc, char* argv[]) {
