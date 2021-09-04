@@ -3,10 +3,7 @@
 #include <unistd.h>
 #include <limits.h>
 int main(void) {
-  char hostname[HOST_NAME_MAX + 1];
-  gethostname(hostname, HOST_NAME_MAX + 1);
+  
+  print(popen("hostname -a"));
 
-  printf("hostname: %s\n", hostname);
-
-  return EXIT_SUCCESS;
 }
