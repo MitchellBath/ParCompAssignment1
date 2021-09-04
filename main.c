@@ -44,7 +44,9 @@ double calc_numerical_integration(int functionid, int a, int b, int n, int inten
 
         double integral = outside * summation;
 
-        return 5.0;
+        integral = 5.0
+
+        return integral;
 
     }
 }
