@@ -21,7 +21,7 @@ double calc_numerical_integration(int functionid, int a, int b, int n, int inten
     double outside;
     double summation;
     outside = (b - a)/n;
-    printf("outside: %lf\n", outside);// prints 0.0
+    //printf("outside: %lf\n", outside);// prints 0.0
     summation = 0;
     /*
     switch (functionid) {
@@ -88,6 +88,7 @@ int main (int argc, char* argv[]) {
     int b = atoi(argv[3]);
     int n = atoi(argv[4]);
     int intensity = atoi(argv[5]);
+    printf("funcid:%i, a:%i, b:%i, n:%i, int:%i", function_id, a, b, n, intensity);
     //
     
     clock_t t; // t represents clock ticks which is of type 'clock_t'
