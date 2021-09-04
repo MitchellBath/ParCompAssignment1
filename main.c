@@ -46,7 +46,7 @@ double calc_numerical_integration(int functionid, int a, int b, int n, int inten
     */
 
     if (functionid == 1) {
-        for (int i = 0; i < n-1; i++) {
+        for (int i = 0; i < n; i++) {
                 summation += f1(a + (i+.5)*outside, intensity);
         }
     }
@@ -67,7 +67,7 @@ double calc_numerical_integration(int functionid, int a, int b, int n, int inten
     }
 
         double integral = outside * summation;
-        printf("calc: %lf\n", integral);
+        //printf("calc: %lf\n", integral); prints 0.0
         return integral;
 
 }
