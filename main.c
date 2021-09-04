@@ -18,8 +18,8 @@ extern "C" {
 #endif
 
 double calc_numerical_integration(int functionid, int a, int b, int n, int intensity){
-    float outside = (b - a)/n;
-    float summation = 0;
+    double outside = (b - a)/n;
+    double summation = 0;
     /*
     switch (functionid) {
         case 1:
@@ -66,7 +66,7 @@ double calc_numerical_integration(int functionid, int a, int b, int n, int inten
         }
     }
         double integral;
-        printf("outside: %lf\n", outside);
+        //printf("outside: %lf\n", outside); prints 0.0
         integral = outside * summation;
         //printf("calc: %lf\n", integral); prints 0.0
         return integral;
