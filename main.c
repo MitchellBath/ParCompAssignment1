@@ -66,7 +66,8 @@ int main (int argc, char* argv[]) {
     int function_id = atoi(argv[1]);
     int a = atoi(argv[2]);
     int b = atoi(argv[3]);
-    int intensity = atoi(argv[4]);
+    int n = atoi(argv[4]);
+    int intensity = atoi(argv[5]);
     
     clock_t t; // t represents clock ticks which is of type 'clock_t'
     t = clock(); // start clock
