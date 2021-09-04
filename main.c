@@ -23,28 +23,28 @@ double calc_numerical_integration(int functionid, int a, int b, int n, int inten
             float outside = (b - a)/n;
             float summation = 0;
         for (int i = 0; i < n-1; i++) {
-            summation += f1(a + (i+.5)*outside, intensity)
+            summation += f1(a + (i+.5)*outside, intensity);
         }
         break;
         case 2:
             float outside = (b - a)/n;
             float summation = 0;
         for (int i = 0; i < n-1; i++) {
-            summation += f2(a + (i+.5)*outside, intensity)
+            summation += f2(a + (i+.5)*outside, intensity);
         }
         break;
         case 3:
             float outside = (b - a)/n;
             float summation = 0;
         for (int i = 0; i < n-1; i++) {
-            summation += f3(a + (i+.5)*outside, intensity)
+            summation += f3(a + (i+.5)*outside, intensity);
         }
         break;
         case 4:
             float outside = (b - a)/n;
             float summation = 0;
         for (int i = 0; i < n-1; i++) {
-            summation += f4(a + (i+.5)*outside, intensity)
+            summation += f4(a + (i+.5)*outside, intensity);
         }
         break;
 
